@@ -1,20 +1,24 @@
 # DeepJoin
-DeepJoinの実装のための簡単なサンプルです。
+DeepJoinの実装のための簡単なサンプル。
 
 ## How to use
-1. データセットのセットアップ
-　実際はデータベースを用いた実装を行うが，サンプルにはtrain, test, valにcsv形式のテーブルを最低限追加している。
+### データセットのセットアップ
+　実際はデータベースを用いた実装を行いますが，サンプルにはtrain, test, valにcsv形式のテーブルを最低限追加している。
 
-2. MPNetのFinetuning
-MPNetのFinetuningはfinetuning.pyによって行う。
- 適宜，パラメータやモデル名などを変更する必要があります。
+### MPNetのFinetuning
+　MPNetのFinetuningはfinetuning.pyを用いる。
+パラメータやモデル名などを指定する必要がある。
 
-3. Offline phase
-Offline phaseは offline.pyを用いて行う。
-Offline phaseではANN Searchの一つであるfaissのindex作成を行う。
+デフォルトのデータでは `python finetuning --batch_size 2 --epochs 3`などとして動作を確認できる。
 
-4. Online phase
-Online phaseは offline.pyを用いて行う。
+### Offline phase
+　Offline phaseは offline.pyを用いる。
+
+Offline phaseではANN Searchの一つであるfaissのindex作成する。
+
+### Online phase
+　Online phaseは offline.pyを用いる。
+
 Online phaseでは作成されたFaiss indexを用いてqueryと最も類似する列を探索する。
 
 ## TODO
