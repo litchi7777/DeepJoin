@@ -46,7 +46,7 @@ def __main__():
     
     # リポジトリ内のテキストとクエリテキストを設定
     repository_texts = setup_texts_from_folder("./datasets/raw/train")
-    query_texts = setup_texts_from_folder("./datasets/raw/train")
+    query_texts = setup_texts_from_folder("./datasets/raw/test")
     query_text = query_texts[0]  # 最初のクエリテキストを使用
 
     # クエリテキストに最も近いテキストを検索
