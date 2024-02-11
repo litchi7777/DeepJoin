@@ -44,8 +44,8 @@ def process_batch(model, tokenizer, data, optimizer=None):
     for table_name, column_name, column_value in zip(table_names, column_names, column_values):
         splited_column_values = column_value.split(",")
         splited_column_values_aug = splited_column_values.copy()
-        textX = generate_texts_from_folder(table_name, column_name, splited_column_values)
-        textY = generate_texts_from_folder(table_name, column_name, splited_column_values_aug)
+        textX = generate_text_from_data(table_name, column_name, splited_column_values)
+        textY = generate_text_from_data(table_name, column_name, splited_column_values_aug)
         textsX.append(textX)
         textsY.append(textY)
 
